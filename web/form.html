@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML FORMS</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+        <legend>Registration Form</legend><br><br>
+        <label>Enter your full name:</label><br><br>
+        <input type="text" name="Full Name" placeholder="John Doe"><br><br>
+        <label>Enter Your Email</label><br><br>
+        <input type="email" name="Email" placeholder="john.doe@example.com"><br><br>
+        <label>Enter Your Password</label><br><br>
+        <input type="password" name="Password" placeholder="Enter your password"><br><br>
+        <label>Re-enter Your Password</label><br><br>
+        <input type="password" name="Re-enter Password" placeholder="Re-enter your password"><br><br>
+        <label>Choose</label>
+        <input type="radio" name="Gender" value="Male"> Male
+        <input type="radio" name="Gender" value="Female"> Female<br><br>
+        <label>Choose Your Preferences:</label>
+        <select>
+            <option>Cocert</option>
+            <option selected>Workshop</option>
+            <option>Seminar</option>
+        </select>
+        <label>Enter Your Address</label><br><br>
+        <textarea name="Address" rows="5" cols="30" placeholder="Enter your address"></textarea><br><br>
+        <button style="background-color: green;">Submit</button>
+        <button style="background-color: red;">Clear all</button>
+        </fieldset>
+    </form>    
+</body>
+</html>

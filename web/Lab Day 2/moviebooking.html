@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Movie Night Ticket Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333333;
+    }
+
+    h2 {
+      color: #333333;
+    }
+
+    /* ── Movie Table ── */
+    table {
+      border-collapse: collapse;
+      width: 60%;
+      margin-bottom: 30px;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #4a90d9;
+      color: white;
+    }
+
+    /* ── Booking Form ── */
+    form {
+      background-color: #ffffff;
+      padding: 20px;
+      width: 55%;
+      border: 1px solid #cccccc;
+    }
+
+    fieldset {
+      border: 1px solid #aaaaaa;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #333333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 6px;
+      margin-bottom: 12px;
+      border: 1px solid #aaaaaa;
+    }
+
+    textarea {
+      height: 80px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .radio-label,
+    .check-label {
+      display: inline;
+      font-weight: normal;
+      margin-right: 15px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 8px 20px;
+      margin-right: 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    input[type="submit"] {
+      background-color: #4a90d9;
+      color: white;
+      border: none;
+    }
+
+    input[type="reset"] {
+      background-color: #aaaaaa;
+      color: white;
+      border: none;
+    }
+
+    /* ── Cinema Rules Table ── */
+    .rules-table {
+      border-collapse: collapse;
+      width: 60%;
+      margin-top: 10px;
+    }
+
+    .rules-table th,
+    .rules-table td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .rules-table th {
+      background-color: #4a90d9;
+      color: white;
+    }
+
+    .rules-table .category-cell {
+      background-color: #d9e8f7;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Heading -->
+  <h1>Movie Night Ticket Booking</h1>
+
+  <!-- 1. Movies Table -->
+  <h2>Available Movies</h2>
+  <table>
+    <tr>
+      <th>Movie</th>
+      <th>Genre</th>
+      <th>Show Time</th>
+      <th>Ticket Price</th>
+    </tr>
+    <tr>
+      <td>The Lost City</td>
+      <td>Adventure</td>
+      <td>4.00 PM</td>
+      <td>Rs. 800</td>
+    </tr>
+    <tr>
+      <td>Midnight Mystery</td>
+      <td>Mystery</td>
+      <td>6.30 PM</td>
+      <td>Rs. 900</td>
+    </tr>
+    <tr>
+      <td>Future World</td>
+      <td>Science Fiction</td>
+      <td>8.00 PM</td>
+      <td>Rs. 1000</td>
+    </tr>
+  </table>
+
+  <!-- 2. Ticket Booking Form -->
+  <h2>Ticket Booking Form</h2>
+
+  <form>
+
+    <!-- Personal Details -->
+    <fieldset style="background-color: #f9f9f9; padding: 15px; margin-bottom: 15px;">
+      <legend>Personal Details</legend>
+
+      <label for="customerName">Customer Name:</label>
+      <input type="text" id="customerName" name="customerName" placeholder="Enter your full name" />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" />
+
+    </fieldset>
+
+    <!-- Booking Details -->
+    <fieldset style="background-color: #f9f9f9; padding: 15px; margin-bottom: 15px;">
+      <legend>Booking Details</legend>
+
+      <label for="movie">Movie:</label>
+      <select id="movie" name="movie">
+        <option value="">-- Select a Movie --</option>
+        <option value="the-lost-city">The Lost City</option>
+        <option value="midnight-mystery">Midnight Mystery</option>
+        <option value="future-world">Future World</option>
+      </select>
+
+      <label for="showDate">Show Date:</label>
+      <input type="date" id="showDate" name="showDate" />
+
+      <label for="numTickets">Number of Tickets:</label>
+      <input type="number" id="numTickets" name="numTickets" min="1" max="10" />
+
+    </fieldset>
+
+    <!-- Seat & Extras -->
+    <fieldset style="background-color: #f9f9f9; padding: 15px; margin-bottom: 15px;">
+      <legend>Seat &amp; Extras</legend>
+
+      <label>Seat Type:</label>
+      <input type="radio" name="seatType" value="regular" id="regular" checked />
+      <label class="radio-label" for="regular">Regular</label>
+      <input type="radio" name="seatType" value="premium" id="premium" />
+      <label class="radio-label" for="premium">Premium</label>
+
+      <br /><br />
+
+      <label>Snacks:</label>
+      <input type="checkbox" name="snacks" value="popcorn" id="popcorn" />
+      <label class="check-label" for="popcorn">Popcorn</label>
+      <input type="checkbox" name="snacks" value="softdrink" id="softdrink" />
+      <label class="check-label" for="softdrink">Soft Drink</label>
+      <input type="checkbox" name="snacks" value="nachos" id="nachos" />
+      <label class="check-label" for="nachos">Nachos</label>
+
+      <br /><br />
+
+      <label for="specialRequests">Special Requests:</label>
+      <textarea id="specialRequests" name="specialRequests" placeholder="Any special requests..."></textarea>
+
+    </fieldset>
+
+    <!-- Buttons -->
+    <input type="submit" value="Book Tickets" />
+    <input type="reset" value="Clear Form" />
+
+  </form>
+
+  <br />
+
+  <!-- Challenge: Cinema Rules Table using rowspan and colspan -->
+  <h2>Cinema Rules</h2>
+  <table class="rules-table">
+    <tr>
+      <th colspan="3">Cinema Rules &amp; Regulations</th>
+    </tr>
+    <tr>
+      <th>Category</th>
+      <th>Rule</th>
+      <th>Details</th>
+    </tr>
+    <tr>
+      <td class="category-cell" rowspan="2">Mobile Phones</td>
+      <td>Silent Mode</td>
+      <td>Switch your phone to silent before the show.</td>
+    </tr>
+    <tr>
+      <td>No Filming</td>
+      <td>Recording the film is strictly prohibited.</td>
+    </tr>
+    <tr>
+      <td class="category-cell" rowspan="2">Food &amp; Drinks</td>
+      <td>Outside Food</td>
+      <td>Outside food is not allowed inside the hall.</td>
+    </tr>
+    <tr>
+      <td>Concessions Only</td>
+      <td>Only items from our counter are permitted.</td>
+    </tr>
+    <tr>
+      <td class="category-cell">Safety</td>
+      <td colspan="2">Emergency exits are at the front-left and rear of each hall. Please take note before the show begins.</td>
+    </tr>
+  </table>
+
+</body>
+</html>
