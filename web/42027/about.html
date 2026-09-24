@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Emerging Technologies</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin:0; background:#f4f1e8; color:#283a3c; font-family:Arial,sans-serif; }
+    header { padding:27px 20px 40px; color:#fffdf8; text-align:center; background:linear-gradient(105deg,#713a36,#b75b3e 49%,#398583); }
+    h1 { margin:0; font-size:2.55rem; animation:slideDown .7s ease-out; }
+    .subtitle { margin:17px 0 27px; font-size:1.05rem; }
+    nav a { display:inline-block; margin:0 6px; padding:10px 24px; border:2px solid #fffdf8; border-radius:24px; color:#fffdf8; text-decoration:none; font-weight:bold; transition:.25s; }
+    nav a:hover { color:#713a36; background:#fffdf8; transform:translateY(-3px); }
+    main { max-width:1120px; margin:34px auto 0; padding:0 22px 50px; }
+    .about-hero { display:grid; grid-template-columns:1.1fr .9fr; overflow:hidden; border-radius:21px; background:#fffdf8; box-shadow:0 10px 25px rgba(40,58,60,.12); animation:showUp .7s ease-out; }
+    .about-copy { padding:47px; } h2 { margin:0 0 18px; font-size:2.15rem; color:#273b3d; } p { line-height:1.5; }
+    .shapes { min-height:330px; position:relative; overflow:hidden; background:#d5e0d5; animation:floatArea 5s ease-in-out infinite; }
+    .circle { position:absolute; border-radius:50%; } .big { width:190px; height:190px; background:#398583; top:64px; left:80px; box-shadow:22px 22px 0 #c0703e; } .small { width:65px; height:65px; background:#f1c27a; top:50px; right:68px; animation:pulse 3s infinite; } .orange { width:42px; height:42px; background:#bd633e; bottom:48px; right:103px; animation:pulse 3s .7s infinite; }
+    .line { position:absolute; width:250px; height:250px; right:-85px; bottom:-100px; border:24px solid #fffdf8; border-radius:50%; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:33px; }
+    .card { padding:28px; min-height:195px; border-radius:17px; background:#fffdf8; transition:.25s; animation:showUp .7s ease-out both; } .card:nth-child(2){animation-delay:.12s}.card:nth-child(3){animation-delay:.24s}
+    .card:hover { transform:translateY(-8px); box-shadow:0 10px 18px rgba(40,58,60,.15); } .card h3 { margin:12px 0; font-size:1.3rem; } .icon { color:#fffdf8; background:#398583; border-radius:50%; display:inline-grid; place-items:center; width:34px; height:34px; font-weight:bold; }
+    .message { margin-top:33px; padding:28px 34px; border-left:8px solid #bd633e; background:#fffdf8; box-shadow:7px 7px 0 #d5e0d5; animation:showUp .7s .3s ease-out both; }
+    footer { padding:38px; color:#fffdf8; background:#273b3d; text-align:center; font-weight:bold; }
+    @keyframes showUp { from {opacity:0;transform:translateY(24px)} to {opacity:1;transform:none} } @keyframes slideDown { from {opacity:0;transform:translateY(-14px)} to {opacity:1;transform:none} } @keyframes floatArea { 50% {transform:translateY(-8px)} } @keyframes pulse { 50% {transform:scale(1.18)} }
+    @media(max-width:720px) { h1 {font-size:2rem} .about-hero,.cards {grid-template-columns:1fr} .about-copy{padding:34px}.shapes{min-height:250px}.big{left:20%;top:35px;width:150px;height:150px} }
+  </style>
+</head>
+<body>
+  <header><h1>About Us</h1><p class="subtitle">A student project about the technology shaping tomorrow</p><nav><a href="index.html">Home</a><a href="technologies.html">Technologies</a><a href="about.html">About Us</a></nav></header>
+  <main>
+    <section class="about-hero"><div class="about-copy"><h2>Learning about the future, one idea at a time.</h2><p>This website was created as a simple university web-design project. Its purpose is to introduce a few emerging technologies in a clear and interesting way.</p><p>We believe technology is easier to understand when we ask curious questions and share what we learn.</p></div><div class="shapes" aria-label="Decorative abstract technology illustration"><span class="circle big"></span><span class="circle small"></span><span class="circle orange"></span><span class="line"></span></div></section>
+    <section class="cards"><article class="card"><span class="icon">01</span><h3>Our Goal</h3><p>To make technology topics feel friendly and understandable for students who are just getting started.</p></article><article class="card"><span class="icon">02</span><h3>Our Focus</h3><p>We explore artificial intelligence, robotics, and extended reality through short, simple examples.</p></article><article class="card"><span class="icon">03</span><h3>Our Future</h3><p>We hope to keep learning, experimenting, and using technology in thoughtful and useful ways.</p></article></section>
+    <section class="message"><h2>A small idea can start something big.</h2><p>Emerging technology needs curious learners, creative thinkers, and people who care about how new ideas affect the world.</p></section>
+  </main>
+  <footer>© 2026 Emerging Technologies</footer>
+</body>
+</html>

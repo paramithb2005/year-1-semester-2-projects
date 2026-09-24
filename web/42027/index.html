@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emerging Technologies 2026</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin:0; background:#f4f1e8; color:#283a3c; font-family:Arial,sans-serif; }
+    header { padding:27px 20px 40px; color:#fffdf8; text-align:center; background:linear-gradient(105deg,#713a36,#b75b3e 49%,#398583); }
+    h1 { margin:0; font-size:2.55rem; animation:slideDown .7s ease-out; }
+    .subtitle { margin:17px 0 27px; font-size:1.05rem; }
+    nav a { display:inline-block; margin:0 6px; padding:10px 24px; border:2px solid #fffdf8; border-radius:24px; color:#fffdf8; text-decoration:none; font-weight:bold; transition:.25s; }
+    nav a:hover { background:#fffdf8; color:#713a36; transform:translateY(-3px); }
+    main { max-width:1240px; margin:34px auto 0; padding:0 22px 34px; }
+    .hero { display:grid; grid-template-columns:1.15fr .95fr; min-height:435px; overflow:hidden; border-radius:21px; background:#fffdf8; box-shadow:0 10px 25px rgba(40,58,60,.12); animation:showUp .7s ease-out; }
+    .hero-text { display:flex; flex-direction:column; justify-content:center; padding:46px; }
+    h2 { margin:0 0 24px; font-size:2.3rem; color:#273b3d; }
+    .hero-text p { max-width:530px; margin:0 0 28px; font-size:1.05rem; line-height:1.35; }
+    .main-button { align-self:flex-start; padding:13px 25px; border-radius:7px; background:#c0703e; color:white; text-decoration:none; font-size:1.03rem; transition:.25s; }
+    .main-button:hover { background:#398583; transform:translateY(-4px); }
+    .tech-art { position:relative; min-height:360px; overflow:hidden; background:#d5e0d5 url("tech-image.jpg") center / cover no-repeat; animation:artFloat 5s ease-in-out infinite; }
+    .tech-art::before { content:""; position:absolute; inset:0; background:linear-gradient(135deg,rgba(39,59,61,.12),transparent 55%); }
+    .chip { display:none; position:absolute; top:24%; left:22%; width:210px; height:160px; border:14px solid #2a5556; background:#6b9c91; box-shadow:0 0 0 12px #e3a365,27px 27px 0 rgba(69,77,68,.2); animation:float 4s ease-in-out infinite; }
+    .chip::after { content:"AI"; position:absolute; inset:0; display:grid; place-items:center; color:#fffdf8; font-size:3rem; font-weight:bold; letter-spacing:4px; }
+    .dot { display:none; position:absolute; width:38px; height:38px; border-radius:50%; background:#bd633e; box-shadow:0 0 0 9px #f2d9b7; animation:pulse 2.8s infinite; }
+    .one { top:13%; right:15%; } .two { bottom:13%; left:13%; animation-delay:.8s; } .three { right:13%; bottom:20%; animation-delay:1.4s; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:33px; }
+    .card { min-height:207px; padding:30px; border-radius:17px; background:#fffdf8; transition:.25s; }
+    .card:hover { transform:translateY(-8px); box-shadow:0 10px 18px rgba(40,58,60,.15); }
+    .card h3 { margin:18px 0; font-size:1.34rem; } .card p { margin:0; font-size:1.02rem; line-height:1.3; }
+    .mark { display:inline-block; padding:5px 9px; border-radius:50%; color:#fff; background:#398583; font-size:.8rem; }
+    footer { padding:38px; color:#fffdf8; background:#273b3d; text-align:center; font-weight:bold; }
+    @keyframes showUp { from {opacity:0;transform:translateY(24px)} to {opacity:1;transform:none} } @keyframes slideDown { from {opacity:0;transform:translateY(-14px)} to {opacity:1;transform:none} } @keyframes float { 50% {transform:translateY(-12px) rotate(2deg)} } @keyframes pulse { 50% {transform:scale(1.2)} } @keyframes artFloat { 50% {transform:translateY(-8px)} }
+    @media(max-width:720px) { h1{font-size:2rem}.hero,.cards{grid-template-columns:1fr}.hero-text{padding:35px}.tech-art{min-height:280px}.chip{left:20%;width:180px;height:135px} }
+  </style>
+</head>
+<body>
+  <header><h1>Emerging Technologies 2026</h1><p class="subtitle">Discover the technologies shaping the future</p><nav><a href="index.html">Home</a><a href="technologies.html">Technologies</a><a href="about.html">About Us</a></nav></header>
+  <main>
+    <section class="hero"><div class="hero-text"><h2>The Future of Technology</h2><p>Emerging technologies are new or developing technologies that have the potential to transform industries and society.</p><a class="main-button" href="technologies.html">Explore Technologies</a></div><div class="tech-art" aria-label="A decorative technology circuit illustration"><div class="chip"></div><span class="dot one"></span><span class="dot two"></span><span class="dot three"></span></div></section>
+    <section class="cards"><article class="card"><span class="mark">AI</span><h3>Artificial Intelligence</h3><p>AI enables computers and software to perform tasks that normally require human intelligence.</p></article><article class="card"><span class="mark">RB</span><h3>Robotics</h3><p>Robotics combines software and hardware to create machines that can perform automated tasks.</p></article><article class="card"><span class="mark">XR</span><h3>Extended Reality</h3><p>AR and VR technologies combine digital content with interactive environments.</p></article></section>
+  </main><footer>© 2026 Emerging Technologies</footer>
+</body>
+</html>
