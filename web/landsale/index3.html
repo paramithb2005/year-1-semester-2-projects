@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Click This Button To Calculate Cost</p>
+    <h3 id = "results"></h3>
+    <input type = button name = "submit" value = "Click Here" onclick = "calculateCost()">
+    <script>
+        function calculateCost(){
+            var vegitablePrice = prompt("Enter The Price Of The Vegitable");
+            var drinkPrice = prompt("Enter The Price Of The Drink");
+            var totalCost = Number(vegitablePrice) + Number(drinkPrice);
+            document.getElementById("result").innerHTML = "tOTAL"
+        }
+    </script>
+</body>
+</html>
