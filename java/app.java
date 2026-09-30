@@ -1,4 +1,4 @@
-class App{
+class app {
     public static void main(String[] args){
         Calculator obj1 = new Calculator();
         obj1.addNumbers();

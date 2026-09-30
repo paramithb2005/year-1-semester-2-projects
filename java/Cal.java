@@ -1,4 +1,4 @@
-class Calculator{
+class Cal {
     int num1  = 20;
     int num2 = 10;
     //method 1

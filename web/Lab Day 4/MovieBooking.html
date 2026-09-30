@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=4, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:whitesmoke; text-align:center;">
+    <h1 style="color: rgb(0, 0, 0);">Movie Night Ticket Booking</h1>
+    <form>
+        <fieldset>
+            <legend>Movie Booking Form</legend>
+        <label>Enter Your Name:</label><br>
+        <input type="text" name="name"><br><br>
+        <label>Enter Your Email Address:</label><br>
+        <input type="email" name="email"><br><br>
+        <label>Select Your Movie</label><br>
+        <select name="movie">
+            <option value="movie1">The Lost City</option>
+            <option value="movie2">Midnight Mystry</option>
+            <option value="movie3">Future World</option>
+        </select><br><br>
+        <label>Select a date</label><br>
+        <input type="date" name="date"><br><br>
+        <label>Enter the number of tickets</label><br>
+        <input type="number" name="tickets"><br><br>
+        <label>Seat Type</label><br>
+        <input type="radio" name="seat" value="regular">Regular<br>
+        <input type="radio" name="seat" value="premium">Premium<br>
+        <input type="radio" name="seat" value="vip">VIP<br><br>
+        <label>Snacks</label><br>
+        <input type="checkbox" name="snacks" value="popcorn">Popcorn<br>
+        <input type="checkbox" name="snacks" value="soda">Soda<br>
+        <input type="checkbox" name="snacks" value="candy">Candy<br><br>
+        <label>Special Requests</label><br>
+        <textarea name="special_requests" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Book Now">
+        <input type="reset" value="Reset">
+        </fieldset>
+
+    </form>
+    
+</body>
+</html>

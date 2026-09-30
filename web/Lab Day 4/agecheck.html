@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Age Rating Checker</title>
+</head>
+<body>
+  <h1>Movie Age Rating Checker</h1>
+  <p>Reload this page to check another viewer.</p>
+
+  <script>
+    // 1. Ask for the viewer's age
+    var age = Number(window.prompt("Please enter your age:"));
+
+    // 2. Ask which age rating applies to the selected movie
+    var rating = window.prompt('Enter the movie age rating ("PG", "15" or "18"):');
+
+    // 3. Eligibility logic
+    var eligible = true;
+
+    if (rating === "18" && age < 18) {
+      eligible = false;
+    } else if (rating === "15" && age < 15) {
+      eligible = false;
+    }
+
+    // 4. Show the result
+    if (eligible) {
+      alert("You are eligible to book this movie!");
+    } else {
+      alert("Sorry, you do not meet the age requirement for this movie.");
+    }
+  </script>
+</body>
+</html>
