@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div border="1" style="width: 80%; margin: auto; padding: 20px; border: 1px solid #000;">
+    <h2 style="text-align: center;">ElectroMart Electrical Shop</h2>
+    <h3 style="text-align: center;">Welcome to ElectroMart! Find quality electrical products at affordable prices.</h3>
+    <table border="1" style="width: 100%; border-collapse: collapse; margin-bottom: 25px;">
+        <tr>
+            <th colspan="4" style="text-align: center;">ElectroMart Product Information</th>
+        </tr>
+        <tr>
+            <th>Category</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Offer</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Lighting</td>
+            <td>LED Bulb</td>
+            <td>1290</td>
+            <td>5% off</td>
+        </tr>
+        <tr>
+            <td>Tube Light</td>
+            <td>2500</td>
+            <td>10% off</td>
+        </tr>
+        <tr>
+            <td>Electrical</td>
+            <td>Extension Cord</td>
+            <td>1800</td>
+            <td>5% off</td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align: center;">Minimum Purchase Amount: Rs.1500</td>
+        </tr>
+    </table>
+    <div style="text-align: center; margin-top: 20px;">
+    <input type ="button" value="Shop Information" name="btn1" onclick="function1()">
+    <script>
+        function function1(){
+            alert("Shop Name: ElectroMart Electrical Shop\nMinimum Purchase Amount: Rs.1500\nSpecial offers:Available");
+        }
+    </script>
+    <input type="button" value="Check Budget" name="btn2" onclick="function2()">
+    <script>
+        function function2(){
+            var budget = prompt("Enter Your Budget")
+            if (budget>1500){
+                alert("You can buy products from ElectroMart");
+            } else {
+                alert("You cannot buy products from ElectroMart Please Increase Your budget");
+            }
+
+        }
+    </script>
+    <input type="button" value="Calculate Final Price" name="btn3" onclick="function3()">
+    <script>
+        function function3(){
+            var price = prompt("Enter Your Purchase Amount")
+            if (price<1500){
+                alert("No Discount Available");
+            }else if (price>=1500 && price<3000){
+                var discount = price*0.05;
+                var finalPrice = price-discount;
+                alert("You have received a 5% discount. Your final price is: Rs."+finalPrice);
+            } else if (price>=3000){
+                var discount = price*0.10;
+                var finalPrice = price-discount;
+                alert("You have received a 10% discount. Your final price is: Rs."+finalPrice);
+            }
+        }
+    </script>
+    </div>
+    </div>
+    <br><br>
+    
+    <div>
+        <form onsubmit="return function4()" style="width: 50%; margin: auto; padding: 20px; border: 1px solid #000;">
+            <label>Enter Your Name:</label>
+            <input type="text" name="name" required id="name">
+            <br><br>
+            <label>Product Quantity:</label>
+            <input type="number" name="quantity" required id="quantity">
+            <br><br>
+            <label>Contact Number:</label>
+            <input type="tel" name="phone" required id="phone">
+            <br><br>
+            <label>Product Category:</label>
+            <select name="category" required id="category">
+                <option value="lighting">Lighting</option>
+                <option value="electrical">Electrical</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear">
+        </form>
+    </div>
+        <script>
+            function function4(){
+                let name = document.getElementById("name").value;
+                let quantity = document.getElementById("quantity").value;
+                let phone = document.getElementById("phone").value;
+                let category = document.getElementById("category").value;
+                
+                if (name.trim()==""){
+                    alert("Please enter your name");
+                    return false;
+                }
+                if (quantity<=5){
+                    alert("Please enter a quantity greater than 5");
+                    return false;
+                }
+                if (phone.length!=10){
+                    alert("Please enter a valid 10-digit contact number");
+                    return false;
+                }
+                if (category==""){
+                    alert("Please select a product category");
+                    return false;
+                }
+                alert("Name: "+name+"\nQuantity: "+quantity+"\nContact Number: "+phone+"\nProduct Category: "+category);
+                return true;
+
+
+            }
+        </script>
+
+</body>
+</html>

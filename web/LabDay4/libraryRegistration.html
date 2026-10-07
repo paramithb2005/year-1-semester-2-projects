@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Registration</title>
+</head>
+<body>
+    <div border="1" style="width: 80%; margin: auto; padding: 20px; border: 1px solid #000;"text-align: center;">
+    <fieldset>
+        <legend>Library Registration Form</legend>
+        <form>
+            <label>Full Name:</label>
+            <input type="text" name="fullname" required id="name"><br><br>
+            <label>Student ID:</label>
+            <input type="text" name="studentid" required id="sid"><br><br>
+            <label>Email:</label>
+            <input type="email" name="email" required id="email"><br><br>
+            <label>Year of Study:</label>
+            <select name="year" required id="year">
+                <option value="">Select Year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+            </select><br><br>
+            <label>Membership Type:</label>
+            <input type="radio" name="membership" value="regular" required id="regular"> Regular
+            <input type="radio" name="membership" value="premium" required id="premium"> Premium<br><br>
+            <label>Recive Library Updates:</label>
+            <input type="checkbox" name="updates" value="yes" id = "check"> Yes
+            <input type="checkbox" name="updates" value="no" id = "check2"> No<br><br>
+            <label>Agree to the terms and conditions:</label>
+            <input type="checkbox" name="terms" value="yes" required id="yes">
+            <label for="terms">I agree to the terms and conditions</label>
+            <br><br>
+            <button type="submit" onclick="validatefun()">Submit</button>
+
+        </form>
+    </fieldset>
+    </div>
+    <script>
+        function validatefun(){
+            let name = document.getElementById("name").value;
+            let studentid = document.getElementById("sid").value;
+            let email = document.getElementById("email").value;
+            let year = document.getElementById("year").value;
+            if (name==""){
+                alert.("Please enter your full name");
+            } else if (studentid==""){
+                alert("Please enter your student ID");
+            } else if (email==""){
+                alert("Please enter your email");
+            } else if (year==""){
+                alert("Please select your year of study");
+            } else {
+                alert("Registration successful!");
+            }
+
+
+        }
+    </script>
+</body>
+</html>
