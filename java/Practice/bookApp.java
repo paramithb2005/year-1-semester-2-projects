@@ -12,4 +12,4 @@ class bookApp {
         b1.pages=300;
         b1.displayDetails();
     }
-}jj 
+}

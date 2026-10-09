@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        fieldset {
+            width: 500px;
+            margin: 30px auto;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+            margin-bottom: 15px;
+        }
+
+        input, textarea, select {
+            padding: 5px;
+        }
+
+        textarea {
+            width: 250px;
+            height: 80px;
+        }
+
+        #result {
+            width: 500px;
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="patientForm">
+
+        <fieldset>
+
+            <legend>Patient Information</legend>
+
+            <label>Name:</label>
+            <input type="text" id="name">
+            <br>
+
+            <label>Address:</label>
+            <textarea id="address"></textarea>
+            <br>
+
+            <label>Birth Date:</label>
+            <input type="date" id="birthDate">
+            <br>
+
+            <label>Age:</label>
+            <input type="number" id="age">
+            <br>
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <br><br>
+
+            <label>Disease:</label>
+            <select id="disease">
+                <option value="">Select</option>
+                <option value="Fever">Fever</option>
+                <option value="Diabetes">Diabetes</option>
+                <option value="Heart Disease">Heart Disease</option>
+                <option value="Asthma">Asthma</option>
+            </select>
+            <br><br>
+
+            <label>E-mail:</label>
+            <input type="email" id="email">
+            <br>
+
+            <label>PIN:</label>
+            <input type="password" id="pin">
+            <br><br>
+
+            <input type="button" value="Submit" onclick="validateForm()">
+
+        </fieldset>
+
+    </form>
+
+
+    <!-- Submitted details will appear here -->
+    <div id="result"></div>
+
+
+    <script>
+
+        function validateForm() {
+
+            // Get values
+            let name = document.getElementById("name").value;
+            let address = document.getElementById("address").value;
+            let birthDate = document.getElementById("birthDate").value;
+            let age = document.getElementById("age").value;
+            let disease = document.getElementById("disease").value;
+            let email = document.getElementById("email").value;
+            let pin = document.getElementById("pin").value;
+
+            // Get gender
+            let gender = document.querySelector(
+                'input[name="gender"]:checked'
+            );
+
+            // Validation
+            if (name == "") {
+                alert("Please enter your name.");
+                return;
+            }
+
+            if (address == "") {
+                alert("Please enter your address.");
+                return;
+            }
+
+            if (birthDate == "") {
+                alert("Please enter your birth date.");
+                return;
+            }
+
+            if (age == "") {
+                alert("Please enter your age.");
+                return;
+            }
+
+            if (gender == null) {
+                alert("Please select your gender.");
+                return;
+            }
+
+            if (disease == "") {
+                alert("Please select a disease.");
+                return;
+            }
+
+            if (email == "") {
+                alert("Please enter your email.");
+                return;
+            }
+
+            if (pin == "") {
+                alert("Please enter your PIN.");
+                return;
+            }
+
+            // If everything is filled
+            alert("Patient registration successful!");
+
+            // Display submitted information
+            document.getElementById("result").innerHTML =
+                "<h2>Patient Details</h2>" +
+                "<p><b>Name:</b> " + name + "</p>" +
+                "<p><b>Address:</b> " + address + "</p>" +
+                "<p><b>Birth Date:</b> " + birthDate + "</p>" +
+                "<p><b>Age:</b> " + age + "</p>" +
+                "<p><b>Gender:</b> " + gender.value + "</p>" +
+                "<p><b>Disease:</b> " + disease + "</p>" +
+                "<p><b>E-mail:</b> " + email + "</p>" +
+                "<p><b>PIN:</b> " + pin + "</p>";
+        }
+
+    </script>
+
+</body>
+</html>
