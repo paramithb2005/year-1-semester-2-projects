@@ -1,0 +1,20 @@
+public class PayrollApp {
+    public static void main(String[] args) {
+        // Create one Employee object and one Manager object stored in Employee reference variables
+        Employee emp = new Employee("Alice Smith", 50000.0);
+        Employee mgr = new Manager("Bob Jones", 80000.0, 15000.0);
+
+        // Print each person's name and the result of calculateSalary()
+        System.out.println("Employee: " + emp.getName());
+        System.out.println("Calculated Salary: $" + emp.calculateSalary());
+        System.out.println();
+
+        System.out.println("Manager: " + mgr.getName());
+        System.out.println("Calculated Salary: $" + mgr.calculateSalary());
+        System.out.println();
+
+        // Call calculateSalary(10) on the Employee object and print the result
+        System.out.println("Employee (" + emp.getName() + ") with 10 overtime hours:");
+        System.out.println("Total Salary: $" + emp.calculateSalary(10));
+    }
+}
